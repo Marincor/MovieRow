@@ -117,7 +117,7 @@ const listMovie = JSON.parse(localStorage.getItem('ListMovies'));
     
              /* criação da linha */
              const tr = document.createElement('tr');
-             table.appendChild(tr);
+            
      
           /*  - - -conteudo - - - */
      
@@ -153,15 +153,20 @@ const listMovie = JSON.parse(localStorage.getItem('ListMovies'));
              tdStatus.innerHTML =  `<select name="${register._status}" id="" data-status><option value="Já vi">Já vi</option><option value="Quero ver">Quero ver</option><option value="Abandonei">Abandonei</option><option value="Vendo">Vendo</option></select>`
      
               /* Edit btn */ 
-              const tdBtnEdit = document.createElement('td')
-              tr.appendChild(tdBtnEdit)
-              tdBtnEdit.innerHTML = `<button class="btn" data-btnEditar>Editar</button>`;
 
+              
+             const btnEdit = document.createElement('button');
+             btnEdit.classList.add("btnEdit")
+             btnEdit.textContent = "Editar"
+             
+              tr.appendChild(btnEdit)
+            
               /* Delete btn */ 
-              const tdBtnDelete = document.createElement('td')
+              const tdBtnDelete = document.createElement('button');
+              tdBtnDelete.textContent = "Excluir"
               tr.appendChild(tdBtnDelete)
-              tdBtnDelete.innerHTML = `<button class="btn" data-btnDelete>Excluir</button>`;
-    
+            
+              table.appendChild(tr);
     
         })
     
@@ -170,65 +175,54 @@ const listMovie = JSON.parse(localStorage.getItem('ListMovies'));
 
         /* - - Edit - - cr(U)d */ 
 
-        const btnEditar = document.querySelector('[data-btneditar]');
-        
+        const btnEditarArray = document.querySelectorAll('.btnEdit');
 
-          btnEditar.addEventListener('click', (evento)=> {
+        btnEditarArray.forEach( btnEditar => {
 
-            const currentUsertoEditItem = listMovie.find(atribute => atribute._login == currentUser)
+            btnEditar.addEventListener('click', (evento)=> {
 
-            if (currentUsertoEditItem) {
-
-                btnEditar.innerHTML = `<button data-btnConfirmarAlt> Confirmar alteração </button>`
-
-
-            /* - - Poster collectData  - -*/
-            const currentTdPoster =  evento.target.closest('tr').firstChild;
-            currentTdPoster.innerHTML = `<input type="file" id="newPoster" data-img-PosterEdit>`
-            const newPosterConverted = document.querySelector('#previewNewPoster');
-            imageCollectorNewPoster();
-
-            /*  - - Name  collectData- -*/
-            const currentTDName = evento.target.closest('tr');
-           
-            console.log(currentTDName)
-            
-
-          
-            /* - - - change current itens - - */ 
-
-            const btnConfirmarAlt = document.querySelector('[data-btnConfirmarAlt]');
-            btnConfirmarAlt.addEventListener('click', (evento) => {
-
-                
-
-              
-
-                let newPoster = listMovie.find(atribute => atribute._poster = newPosterConverted.src);
-
+                const currentUsertoEditItem = listMovie.find(atribute => atribute._login == currentUser)
+    
+                if (currentUsertoEditItem) {
+    
+                    btnEditar.innerHTML = `<button data-btnConfirmarAlt> Confirmar alteração </button>`
+    
+    
+                /* - - Poster collectData  - -*/
+                const currentTdPoster =  evento.target.closest('tr').firstChild;
+                currentTdPoster.innerHTML = `<input type="file" id="newPoster" data-img-PosterEdit>`
+                const newPosterConverted = document.querySelector('#previewNewPoster');
+                imageCollectorNewPoster();
+    
+                /*  - - Name  collectData- -*/
+                const currentTDName = evento.target.closest('tr');
                
-           
-                const newVetorEdit = listMovie || [];
-                localStorage.setItem('ListMovies', JSON.stringify(newVetorEdit));
-
+                console.log(currentTDName)
                 
-                window.location.href = "movierow.html"
-             
+    
+              
+                /* - - - change current itens - - */ 
+        
+                    const btnConfirmarAlt = document.querySelector('[data-btnConfirmarAlt]');
 
-            })
-          
-           
+                    btnConfirmarAlt.addEventListener('click', (evento) => { 
+
+                        let newPoster = listMovie.find(atribute => atribute._poster = newPosterConverted.src);
+        
+                    
                 
-            }
-  
+                        const newVetorEdit = listMovie || [];
+                        localStorage.setItem('ListMovies', JSON.stringify(newVetorEdit));
+        
+                        
+                        window.location.href = "movierow.html"
+                    })
 
-            
-            
-
+                }
                 
-                  
-          })
+             })
 
+        })
           /* - - Delete - - cru(D) */ 
 
-          
+         
