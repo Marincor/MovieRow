@@ -30,9 +30,23 @@ form.addEventListener('submit', (event)=>{
         /* success session - hour definition */ 
         const time = new Date();
         const hora= time.getHours()
-        const min = time.getMinutes()
-        const seg = time.getSeconds();
-        const currentTime = `${hora}:${min}:${seg}`
+
+/* function to get a zero before the second number of minuto (ex: 02 min) */
+
+function newhour() {
+    function pad(s) {
+        return (s < 10) ? '0' + s : s;
+    }
+    var date = new Date();
+    return [date.getHours(), date.getMinutes()].map(pad).join(':');
+}
+/* - - - -*/
+
+        const min = newhour;
+
+
+       
+        const currentTime = `${hora}:${min}`
 
         const day = time.getDate();
         const month = time.getMonth();

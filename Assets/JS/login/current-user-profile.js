@@ -3,9 +3,23 @@
 const time = new Date();
 const hora= time.getHours();
 /* every session take 15min */
-const min = time.getUTCMinutes() -20;
-const seg = time.getSeconds();
-const currentTime = `${hora}:${min}:${seg}`
+
+/* function to get a zero before the second number of minuto (ex: 02 min) */
+
+function newhour() {
+    function pad(s) {
+        return (s < 10) ? '0' + s : s;
+    }
+    var date = new Date();
+    return [date.getHours(), date.getMinutes()-15].map(pad).join(':');
+}
+/* - - - -*/
+
+const min = newhour();
+const currentTime = `${hora}:${min}`
+
+
+
 
 const day = time.getDate();
 const month = time.getMonth();
@@ -16,11 +30,9 @@ const currentDate = `${day}/${actualMonth}/${year}`
 const currentDateTime = `${currentDate} - ${currentTime}`
 
 const currentDateSession = JSON.parse(sessionStorage.getItem ('sessionLogin'));
-console.log(currentDateTime)
-console.log(currentDateSession)
-console.log(currentDateTime < currentDateSession)
 
-//if  (currentDateTime < currentDateSession) {
+
+if  (currentDateTime < currentDateSession) {
 
     /* web api collector */
 
@@ -50,7 +62,7 @@ console.log(currentDateTime < currentDateSession)
 
 
 
-//}
+}
 /* after 15min pass and a load happen (or change browser tab) session end */
 else {
 
