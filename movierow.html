@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRow - Sua própria lista de filmes</title>
+</head>
+<body>
+    <div>
+        <img src="" alt="" id="preview">
+    </div>
+    <div data-dados>
+        <img src="" alt="" id="profileImage">
+        <h2 data-nome></h2>
+    </div>
+
+    <div>
+        <h2>Essa é a sua lista de filmes e séries:</h2></div>
+    <form data-form>
+        <label for="myFileInput">Poster do filme
+            <input type="file" id="myFileInput" data-img-move>
+        </label>
+        <label for="movie-name">
+            <input type="text" name="" id="movie-name" data-movie-name placeholder="Nome">
+        </label>
+        <label for="movie-category">Categoria
+            <select name="" id="movie-category" data-movie-category>
+                <option value="Filme">Filme</option>
+                <option value="Série">Série</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Novela">Novela</option>
+                <option value="Programa">Programa</option>
+                <option value="Animação">Animação</option>
+            </select>
+        </label>
+        <label for="movie-genre">Gênero
+            <select name="" id="movie-genre" data-genre>
+                <option value="Ação">Ação</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+                <option value="Terror">Terror</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Suspense">Suspense</option>
+            </select>
+        </label>
+        <label for="movie-year">
+            <input type="number" name="" id="movie-year" data-movie-year placeholder="Ano de lançamento">
+        </label>
+            <input type="hidden" data-status>
+            <input type="hidden" data-userList-login>
+            <input type="hidden" data-userList-password>
+            
+        <input type="submit" value="Adicionar">
+
+    </form>
+
+    <span id="previewPoster"></span>
+
+    <table border="2" data-table>
+        <thead>
+            <th>Poster</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Gênero</th>
+            <th>Ano de lançamento</th>
+            <th>Status</th>
+        </thead>
+        <tbody data-tbody>
+         
+        </tbody>
+      
+    </table>
+
+    
+    
+
+<script src="./Assets/JS/login/current-user-profile.js"></script>
+<script type="module" src="./Assets/JS/list-movies/movies-list.js"></script>
+</body>
+</html>
