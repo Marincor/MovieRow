@@ -12,7 +12,12 @@ export const imageCollectorNewPoster = () => {
         var file = new FileReader();
         file.onload = function(e) {
      
-            const previewPoster = document.getElementById("previewNewPoster").src = e.target.result;
+            const previewPoster = document.querySelectorAll(".previewNewPoster");
+
+            previewPoster.forEach(span => {
+
+                span.src = e.target.result;
+            })
            
            
             

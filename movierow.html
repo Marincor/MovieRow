@@ -45,10 +45,17 @@
                 <option value="Suspense">Suspense</option>
             </select>
         </label>
+        <label for="movie-genre">Status
+            <select name="" id="movie-genre"  data-status>
+                <option value="Já vi">Já vi</option>
+                <option value="Quero ver">Quero ver</option>
+                <option value="Abandonei">Abandonei</option>
+                <option value="Vendo">Vendo</option>
+            </select>
+        </label>
         <label for="movie-year">
             <input type="number" name="" id="movie-year" data-movie-year placeholder="Ano de lançamento">
         </label>
-            <input type="hidden" data-status>
             <input type="hidden" data-userList-login>
             <input type="hidden" data-userList-password>
             
@@ -57,7 +64,7 @@
     </form>
 
     <span id="previewPoster"></span>
-    <span id="previewNewPoster"></span>
+   
 
     <table border="2" data-table>
         <thead>
