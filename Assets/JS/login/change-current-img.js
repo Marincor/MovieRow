@@ -1,95 +1,63 @@
- const imageCollectorNewProfile = () => {
+const imageCollectorNewProfile = () => {
+  const inputNewProfile = document.querySelector("#profileChangeimg");
 
-
-
-
-    const inputNewProfile = document.querySelector('#profileChangeimg');
-    
-    
-    
-    function readImage() {
+  function readImage() {
     if (this.files && this.files[0]) {
-        var file = new FileReader();
-        file.onload = function(e) {
-     
-            const previewPoster = document.querySelector("#previewNewProfile").src = e.target.result;
+      var file = new FileReader();
+      file.onload = function (e) {
+        const previewPoster = (document.querySelector(
+          "#previewNewProfile"
+        ).src = e.target.result);
 
-            const previewPosterSRC =   document.querySelector("#previewNewProfile").src;
+        const previewPosterSRC =
+          document.querySelector("#previewNewProfile").src;
 
-     
-
-
-            sessionStorage.setItem('provisorePIc', previewPosterSRC)
-           
-           
-            
-        };       
-        file.readAsDataURL(this.files[0]);
+        sessionStorage.setItem("provisorePIc", previewPosterSRC);
+      };
+      file.readAsDataURL(this.files[0]);
     }
-    
-    
-    }
-    inputNewProfile.addEventListener("change", readImage, false);
-    
-    
-    
-    }
+  }
+  inputNewProfile.addEventListener("change", readImage, false);
+};
 
+imageCollectorNewProfile();
 
-    imageCollectorNewProfile ();
+/* - - - --  Task Change  - -- - - - */
 
+const inputNewProfileImg = document.querySelector("#profileChangeimg");
 
-    /* - - - --  Task Change  - -- - - - */
+const currentSessionUser = JSON.parse(sessionStorage.getItem("currentUser"))[0];
+const currentSessionPass = JSON.parse(sessionStorage.getItem("currentUser"))[1];
 
-    const inputNewProfileImg = document.querySelector("#profileChangeimg");
+const usersSotrage = JSON.parse(localStorage.getItem("Users"));
 
+const findCurrentSessionUser = usersSotrage.find(
+  (atribute) => atribute._login == currentSessionUser
+);
+const findCurrentSessionPass = usersSotrage.find(
+  (atribute) => atribute._senha == currentSessionPass
+);
 
-    
+inputNewProfileImg.addEventListener("change", () => {
+  if (!inputNewProfileImg.value == "") {
+    inputNewProfileImg.value = "";
 
-    const currentSessionUser = JSON.parse(sessionStorage.getItem('currentUser'))[0]
-    const currentSessionPass = JSON.parse(sessionStorage.getItem('currentUser'))[1]
+    const btnConf = document.createElement("button");
 
-    const usersSotrage = JSON.parse(localStorage.getItem('Users'))
+    btnConf.textContent = "confirmar nova foto de perfil";
 
-    const findCurrentSessionUser = usersSotrage.find(atribute => atribute._login == currentSessionUser)
-    const findCurrentSessionPass = usersSotrage.find(atribute => atribute._senha == currentSessionPass)
+    const div = document.querySelector("[data-dados]");
 
-    const newProfIMGconverted =  sessionStorage.getItem('provisorePIc');
+    div.appendChild(btnConf);
 
-   
+    btnConf.addEventListener("click", () => {
+      const newProfIMGconverted = sessionStorage.getItem("provisorePIc");
 
-    
+      findCurrentSessionUser._avatar = newProfIMGconverted;
 
-    
+      localStorage.setItem("Users", JSON.stringify(usersSotrage));
 
-    inputNewProfileImg.addEventListener('change', ()=>{
-
-        if (!inputNewProfileImg.value == "")
-        {
-            console.log (newProfIMGconverted == findCurrentSessionUser._avatar)
-           
-            findCurrentSessionUser._avatar = newProfIMGconverted;
-
-
-            
-
-            
-
-            localStorage.setItem('Users', JSON.stringify(usersSotrage));
-
-            
-
-            // window.location.href = "movierow.html";
-
-          
-            inputNewProfileImg.value = ""
-           
-
-        }
-       
-
-        
-    })
-    
-   
-
+      window.location.href = "movierow.html";
+    });
+  }
+});
