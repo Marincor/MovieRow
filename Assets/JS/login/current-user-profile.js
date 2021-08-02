@@ -60,7 +60,7 @@ if  (currentDateTime < currentDateSession) {
       userName.innerHTML = `Olá, ${trueLogin._nome}`;
     }
 
-
+   
 
 }
 /* after 15min pass and a load happen (or change browser tab) session end */
