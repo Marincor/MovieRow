@@ -1,0 +1,57 @@
+@media screen and (min-width: 375px) {
+  body {
+    background: linear-gradient(to bottom, var(--azulClaro) 1%, var(--rosa));
+    background: no-repeat, cover, center;
+    height: 100vh;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .form-signup {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    font-family: var(--textoCorpo);
+    text-align: center;
+  }
+
+  .form-signup__item-img {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .secondMsg {
+    display: none;
+  }
+
+  .firstImg {
+    display: none;
+  }
+
+  .selectedImg {
+    display: inline;
+  }
+
+  .form-signup__item {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+
+  .btn-sign:hover {
+    background-color: white;
+  }
+}

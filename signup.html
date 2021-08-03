@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/CSS/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/CSS/sign-up/sign-up_header.css">
+    <link rel="stylesheet" href="/Assets/CSS/sign-up/sign-up_form.css">
+    <link rel="stylesheet" href="/Assets/CSS/sign-up/sign-up_footer.css">
     <title>MovieRow - Inscrever-se</title>
 </head>
 <body>
-    <form data-form-sign-up>
+    <header class="header"> 
+        <h1 class="header__titulo">MovieRow</h1>
+    </header>
 
-        <input type="file" class="avatar" id="myAvatarInput" data-sign-avatar>
-        <input type="text" class="name" placeholder="Nome" data-sign-name required>
-        <input type="text" class="login" placeholder="Login" data-sign-login required >
-        <input type="password" class="password" placeholder="Senha" data-sign-senha required>
-        <input type="submit" class="btn-sign" value="Cadastrar">
-    </form>
+   <main class="main">
+        <form data-form-sign-up  class="form-signup">
+            <label for="myAvatarInput" class="form-signup__item-img">Escolha uma imagem para o seu perfil 📷</label>
+            <label for="" class="form-signup__item-img secondMsg" >Imagem selecionada ✔️ </label>
+            <input type="file" class="avatar form-signup__item-img" id="myAvatarInput" data-sign-avatar>
+            <input type="text" class="name form-signup__item" placeholder="Nome" data-sign-name required>
+            <input type="text" class="login form-signup__item" placeholder="Login" data-sign-login required >
+            <input type="password" class="password form-signup__item" placeholder="Senha" data-sign-senha required >
+            <input type="submit" class="btn-sign btn" value="Cadastrar">
+        </form>
 
-    <span id="previewCollector"></span>
+        <span id="previewCollector"></span>
+   </main> 
+   
     
+
+   <footer class="footer">
+        <p class="footer__p">Coded by: 
+            <a class="footer__link" href="https://github.com/Marincor">Marincor</a>
+        </p>
+   </footer>
     <script type="module" src="./Assets/JS/sign-up/new-user.js"></script>
     
 </body>

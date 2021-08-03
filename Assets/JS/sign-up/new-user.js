@@ -44,3 +44,24 @@ signForm.addEventListener("submit", (evento) => {
   localStorage.setItem("Users", JSON.stringify(vetor));
   window.location.href = 'signupconclusion.html'
 });
+
+
+ /* - - - avatar class add */
+
+ const inputlab = document.querySelector('.form-signup__item-img');
+
+ const inputSecondLab = document.querySelector('.form-signup__item-img').nextElementSibling;
+
+ const inputhidden = document.querySelector('.form-signup__item-img').nextElementSibling.nextElementSibling;
+
+
+
+
+
+ inputhidden.addEventListener('change', ()=> {
+
+  inputlab.classList.add('firstImg');
+  inputSecondLab.classList.add('selectedImg')
+
+
+ })

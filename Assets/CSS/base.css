@@ -1,0 +1,21 @@
+:root {
+  --textoTitulo: "Dancing Script", cursive;
+  --textoCorpo: "Roboto", sans-serif;
+  --azulEscuro: rgb(36, 51, 110);
+  --azulClaro: rgb(11, 121, 234);
+  --rosa: rgb(215, 10, 113);
+  --branco: rgb(158, 158, 179);
+}
+
+.btn {
+  background-color: black;
+  border: black;
+  border-radius: 2rem;
+  border-style: double;
+  color: var(--branco);
+  font-family: var(--textoCorpo);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  cursor: pointer;
+}
