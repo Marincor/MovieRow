@@ -1,7 +1,7 @@
 @media screen and (min-width: 375px) {
   .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-color: var(--azulEscuro);
     padding: 0.5rem;
     color: var(--branco);
@@ -10,5 +10,12 @@
   .header__titulo {
     font-family: var(--textoTitulo);
     font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .header__logo {
+
+    width: 1.5rem;
   }
 }
+

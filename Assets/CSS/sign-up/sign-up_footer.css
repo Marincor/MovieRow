@@ -10,7 +10,25 @@
 
     .footer__link{
 
-        color:var(--branco);
+        color:white;
     }
+
+}
+
+@media screen and (min-width:768px) { 
+
+    .footer {
+
+
+        display: flex;
+
+        justify-content: center;
+
+      
+        height: 28vh;
+
+        align-items: flex-end;
+    }
+
 
 }

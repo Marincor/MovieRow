@@ -1,4 +1,6 @@
 @media screen and (min-width: 375px) {
+ 
+ 
   body {
     background: linear-gradient(to bottom, var(--azulClaro) 1%, var(--rosa));
     background: no-repeat, cover, center;
@@ -52,6 +54,26 @@
   }
 
   .btn-sign:hover {
-    background-color: white;
+    background-color: rgb(54, 50, 50);
   }
 }
+
+@media screen and (min-width: 768px) {
+
+  .form-signup {
+
+    width: 40vw;
+  }
+
+  
+} 
+
+@media screen and (min-width: 1024px) {
+
+  .form-signup {
+
+    width: 30vw;
+  }
+
+  
+} 
