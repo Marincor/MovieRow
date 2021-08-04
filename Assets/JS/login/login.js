@@ -76,7 +76,7 @@ function newhour() {
     else{
 
         const divAlert = document.querySelector('[data-alert]');
-        divAlert.innerHTML = `<h2> Senha Incorreta </h2>` 
+        divAlert.innerHTML = `<h2> Login ou senha Incorretos </h2>` 
 
     
             

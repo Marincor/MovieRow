@@ -7,6 +7,12 @@
     color: var(--branco);
   }
 
+  .header__link {
+
+    text-decoration: none;
+    color: var(--branco);
+  }
+
   .header__titulo {
     font-family: var(--textoTitulo);
     font-size: 2rem;

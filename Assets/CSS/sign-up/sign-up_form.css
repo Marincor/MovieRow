@@ -75,5 +75,15 @@
     width: 30vw;
   }
 
+  .form-signup__item {
+
+    font-size: 1.2rem;
+  }
+
+  .btn {
+
+    font-size: 1.2rem;
+  }
+
   
 } 
