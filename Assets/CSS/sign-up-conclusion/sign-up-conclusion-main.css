@@ -1,0 +1,43 @@
+@media screen and (min-width: 375px) { 
+
+
+    .conclusion {
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("/Assets/IMG/backgrounds/person-watching-movie.jpg");
+        background-size: cover;
+        background-color: rgba(215, 10, 113, 0.1);
+        background-blend-mode: color;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 100vh;
+    }
+
+    .conclusion__section {
+
+        margin-top: 10rem;
+    }
+
+    .conclusion__message {
+
+        font-family: var(--textoCorpo);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .login {
+
+        margin-top: 1rem;
+        
+        
+    }
+
+    
+
+    
+}
+
