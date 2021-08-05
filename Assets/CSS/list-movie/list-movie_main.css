@@ -1,0 +1,91 @@
+@media screen and (min-width:375px) {
+
+    .content{
+
+        
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: var(--textoCorpo);
+
+    }
+
+    .content__hidden {
+
+        display: none;
+    }
+    .content__titulo-texto {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .content__form {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        text-align: start;
+        background-color: var(--azulClaro);
+        border-radius: 1rem;
+        padding: 0.5rem;
+    }
+
+
+    .content__form h3 {
+
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .content__form-item-option{
+
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .content__form-item{
+
+        margin-bottom: 1rem;
+
+      
+    }
+
+    .label__category {
+
+        margin-left: 2rem;
+    }
+    .category, .genre, .status{
+
+        width: 9.2rem;
+        margin-left: 0.1rem;
+    }
+
+    .label__genre {
+
+        margin-left: 3rem;
+    }
+
+    .label__status {
+
+        margin-left: 3.4rem;
+    }
+
+    .label__year {
+
+        margin-right: 2rem;
+    }
+    .year {
+
+        width: 8.5rem;
+        ;
+    }
+
+   
+}

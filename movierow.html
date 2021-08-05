@@ -1,102 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/CSS/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Assets/IMG/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/IMG/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Assets/IMG/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_header.css">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main.css">
     <title>MovieRow - Sua própria lista de filmes</title>
 </head>
+
 <body>
-    <div>
-        <img src="" alt="" id="preview">
-    </div>
-    <div data-dados>
-        <img src="" alt="" id="profileImage">
-        <label for="profileChangeimg">📷</label>
-        <input type="file" name="" id="profileChangeimg">
-       
-        <span  alt="" id="previewNewProfile">
-        <h2 data-nome></h2>
-    </div>
 
-    <button data-out>
-        sair
-    </button>
+    <header class="header">
 
-    <div>
-        <h2>Essa é a sua lista de filmes e séries:</h2></div>
-    <form data-form>
-        <label for="myFileInput">Poster do filme
-            <input type="file" id="myFileInput" data-img-move>
-        </label>
-        <label for="movie-name">
-            <input type="text" name="" id="movie-name" data-movie-name placeholder="Nome">
-        </label>
-        <label for="movie-category">Categoria
-            <select name="" id="movie-category" data-movie-category>
-                <option value="Filme">Filme</option>
-                <option value="Série">Série</option>
-                <option value="Documentário">Documentário</option>
-                <option value="Novela">Novela</option>
-                <option value="Programa">Programa</option>
-                <option value="Animação">Animação</option>
-            </select>
-        </label>
-        <label for="movie-genre">Gênero
-            <select name="" id="movie-genre" data-genre>
-                <option value="Ação">Ação</option>
-                <option value="Comédia">Comédia</option>
-                <option value="Drama">Drama</option>
-                <option value="Romance">Romance</option>
-                <option value="Terror">Terror</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Suspense">Suspense</option>
-            </select>
-        </label>
-        <label for="movie-genre">Status
-            <select name="" id="movie-genre"  data-status>
-                <option value="Já vi">Já vi</option>
-                <option value="Quero ver">Quero ver</option>
-                <option value="Abandonei">Abandonei</option>
-                <option value="Vendo">Vendo</option>
-            </select>
-        </label>
-        <label for="movie-year">
-            <input type="number" name="" id="movie-year" data-movie-year placeholder="Ano de lançamento">
-        </label>
+        <div class="header__banner">
+
+            <div class="header__site-profile">
+                <h1 class="header__titulo">MovieRow</h1>
+                <img class="header__logo" src="/Assets/IMG/logo/seventh art.svg" alt="movieRow-icon">
+            </div>
+
+
+
+            <button data-out class="btn header__btn-sair">
+                sair
+            </button>
+        </div>
+
+        <div data-dados class="header__profile">
+            <div class="header__profile-img-container">
+                <img src="" alt="" id="profileImage" class="header__profileImg">
+                <label for="profileChangeimg" class="header__btnChange-profileImg">📷</label>
+                <input type="file" name="" id="profileChangeimg">
+            </div>
+
+            <div class="header__profile-info">
+                <span alt="" id="previewNewProfile">
+                    <h2 data-nome class="header__profile-name"></h2>
+
+            </div>
+
+
+        </div>
+    </header>
+
+
+    <main class="content">
+        <div class="content__hidden">
+            <img src="" alt="" id="preview">
+        </div>
+
+      
+        <form data-form class="content__form">
+            <h3>Adicionar novo</h3>
+            <label for="myFileInput" class="content__form-item">Poster do filme
+                <input type="file" id="myFileInput" data-img-move class="content__form-item-option">
+            </label>
+            <label for="movie-name" class="content__form-item" > Nome do filme
+                <input type="text" name="" id="movie-name" data-movie-name class="content__form-item-option" >
+            </label>
+            <label for="movie-category" class="content__form-item label__category">Categoria
+                <select name="" id="movie-category" data-movie-category class="content__form-item-option category">
+                    <option value="Filme">Filme</option>
+                    <option value="Série">Série</option>
+                    <option value="Documentário">Documentário</option>
+                    <option value="Novela">Novela</option>
+                    <option value="Programa">Programa</option>
+                    <option value="Animação">Animação</option>
+                </select>
+            </label>
+            <label for="movie-genre" class="content__form-item label__genre" >Gênero
+                <select name="" id="movie-genre" data-genre class="content__form-item-option genre">
+                    <option value="Ação">Ação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Suspense">Suspense</option>
+                </select>
+            </label>
+            <label for="movie-genre" class="content__form-item label__status">Status
+                <select name="" id="movie-genre" data-status class="content__form-item-option status">
+                    <option value="Já vi">Já vi</option>
+                    <option value="Quero ver">Quero ver</option>
+                    <option value="Abandonei">Abandonei</option>
+                    <option value="Vendo">Vendo</option>
+                </select>
+            </label>
+            <label for="movie-year" class="content__form-item label__year" >Ano de lançamento
+                <input type="number" name="" id="movie-year" data-movie-year placeholder="aaaa" class="content__form-item-option year">
+            </label>
             <input type="hidden" data-userList-login>
             <input type="hidden" data-userList-password>
-            
-        <input type="submit" value="Adicionar">
 
-    </form>
+            <input type="submit" value="Adicionar" class="btn">
 
-    <span id="previewPoster"></span>
-   
+        </form>
 
-    <table border="2" data-table>
-        <thead>
-            <th>Poster</th>
-            <th>Nome</th>
-            <th>Categoria</th>
-            <th>Gênero</th>
-            <th>Ano de lançamento</th>
-            <th>Status</th>
-            <th>✏️ / 🗑️</th>
-           
-        </thead>
-        <tbody data-tbody id="table-body">
-         
-        </tbody>
-      
-    </table>
+        <span id="previewPoster"></span>
+        <div class="content__titulo">
+            <h2 class="content__titulo-texto">Essa é a sua lista de filmes e séries:</h2>
+        </div>
+
+        <table border="2" data-table class="content__table">
+            <thead>
+                <th>Poster</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Gênero</th>
+                <th>Ano de lançamento</th>
+                <th>Status</th>
+                <th>✏️ / 🗑️</th>
+
+            </thead>
+            <tbody data-tbody id="table-body">
+
+            </tbody>
+
+        </table>
+    </main>
 
 
-    
-
-<script src="./Assets/JS/login/current-user-profile.js"></script>
-<script type="module" src="./Assets/JS/list-movies/movies-list.js"></script>
-<script src="./Assets/JS/login/change-current-img.js"></script>
-<script src="/Assets/JS/login/out-session.js"></script>
+    <script src="./Assets/JS/login/current-user-profile.js"></script>
+    <script type="module" src="./Assets/JS/list-movies/movies-list.js"></script>
+    <script src="./Assets/JS/login/change-current-img.js"></script>
+    <script src="/Assets/JS/login/out-session.js"></script>
 </body>
+
 </html>

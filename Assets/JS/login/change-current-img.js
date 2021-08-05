@@ -43,6 +43,8 @@ inputNewProfileImg.addEventListener("change", () => {
     inputNewProfileImg.value = "";
 
     const btnConf = document.createElement("button");
+    btnConf.classList.add("header__btn-profileImg")
+    btnConf.classList.add('btn')
 
     btnConf.textContent = "confirmar nova foto de perfil";
 

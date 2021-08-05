@@ -54,7 +54,7 @@ if  (currentDateTime < currentDateSession) {
     if (trueLogin && truePassword) {
         
 
-      const img = (document.querySelector("#profileImage").src = trueLogin._avatar || "./Assets/IMG/blank-profile-picture.jpg") ;
+      const img = (document.querySelector("#profileImage").src = trueLogin._avatar || "./Assets/IMG/profile-null/blank-profile-picture.jpg") ;
 
       const userName = document.querySelector("[data-nome]");
       userName.innerHTML = `Olá, ${trueLogin._nome}`;
