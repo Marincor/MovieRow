@@ -1,0 +1,16 @@
+@media screen and (min-width: 0px) {
+
+    .footer {
+
+        display: flex;
+        background-color: var(--azulEscuro);
+        padding: 1rem 0;
+        justify-content: space-around;
+    }
+
+    .footer a {
+
+        color: white;
+    }
+    
+}

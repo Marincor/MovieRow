@@ -104,38 +104,39 @@ function readList() {
 
     /* criação da linha */
     const tr = document.createElement("tr");
+    tr.classList.add('content__table__tbody-tr')
 
     /*  - - -conteudo - - - */
 
     /* poster */
     const tdPoster = document.createElement("td");
     tr.appendChild(tdPoster);
-    tdPoster.innerHTML = `<img src="${register._poster}" data-tdPoster />`;
+    tdPoster.innerHTML = `<img src="${register._poster}" data-tdPoster class="content__table__img content__table__tbody-item"/>`;
 
     /* name */
     const tdName = document.createElement("td");
     tr.appendChild(tdName);
-    tdName.innerHTML = `<p class="td-name">${register._name}</p>`;
+    tdName.innerHTML = `<p class="td-name content__table__tbody-item" >${register._name}</p>`;
 
     /* category */
     const tdCategory = document.createElement("td");
     tr.appendChild(tdCategory);
-    tdCategory.innerHTML = `<select value="" id="" data-genre><option value="">${register._category}</option><option value="Filme">Filme</option><option value="Série">Série</option><option value="Documentário">Documentário</option><option value="Novela">Novela</option><option value="Programa">Programa</option><option value="Animação">Animação</option></select>`;
+    tdCategory.innerHTML = `<select value="" id="" data-genre><option value="" class="content__table__tbody-item">${register._category}</option><option value="Filme">Filme</option><option value="Série">Série</option><option value="Documentário">Documentário</option><option value="Novela">Novela</option><option value="Programa">Programa</option><option value="Animação">Animação</option></select>`;
 
     /* genre */
     const tdGenre = document.createElement("td");
     tr.appendChild(tdGenre);
-    tdGenre.innerHTML = `<select value="" id="" data-genre><option value="">${register._genre}</option><option value="Ação">Ação</option><option value="Comédia">Comédia</option><option value="Drama">Drama</option><option value="Romance">Romance</option><option value="Terror">Terror</option><option value="Thriller">Thriller</option><option value="Suspense">Suspense</option></select>`;
+    tdGenre.innerHTML = `<select value="" id="" data-genre><option value="" class="content__table__tbody-item">${register._genre}</option><option value="Ação">Ação</option><option value="Comédia">Comédia</option><option value="Drama">Drama</option><option value="Romance">Romance</option><option value="Terror">Terror</option><option value="Thriller">Thriller</option><option value="Suspense">Suspense</option></select>`;
 
     /* year */
     const tdYear = document.createElement("td");
     tr.appendChild(tdYear);
-    tdYear.innerHTML = `<p>${register._releaseYear}</p>`;
+    tdYear.innerHTML = `<p class="content__table__tbody-year">${register._releaseYear}</p>`;
 
     /* status */
     const tdStatus = document.createElement("td");
     tr.appendChild(tdStatus);
-    tdStatus.innerHTML = `<select value="" id="" data-status><option value="">${register._status}</option><option value="Já vi">Já vi</option><option value="Quero ver">Quero ver</option><option value="Abandonei">Abandonei</option><option value="Vendo">Vendo</option></select>`;
+    tdStatus.innerHTML = `<select value="" id="" data-status><option value="" class="content__table__tbody-item">${register._status}</option><option value="Já vi">Já vi</option><option value="Quero ver">Quero ver</option><option value="Abandonei">Abandonei</option><option value="Vendo">Vendo</option></select>`;
 
     const EditPoster = document.createElement("span");
     tr.appendChild(EditPoster);
@@ -145,14 +146,16 @@ function readList() {
 
     const btnEdit = document.createElement("button");
     btnEdit.classList.add("btnEdit");
-    btnEdit.textContent = "Editar";
+    btnEdit.classList.add("btn")
+    btnEdit.textContent = "✏️";
 
     tr.appendChild(btnEdit);
 
     /* Delete btn */
     const tdBtnDelete = document.createElement("button");
     tdBtnDelete.classList.add("btnDelete");
-    tdBtnDelete.textContent = "Excluir";
+    tdBtnDelete.classList.add('btn')
+    tdBtnDelete.textContent = "🗑️";
 
     tr.appendChild(tdBtnDelete);
 
@@ -171,7 +174,7 @@ btnEditarArray.forEach((btnEditar) => {
     );
 
     if (currentUsertoEditItem) {
-      btnEditar.innerHTML = `<button data-btnConfirmarAlt> Confirmar alteração </button>`;
+      btnEditar.innerHTML = `<button data-btnConfirmarAlt class="btn">✔️</button>`;
 
       /* - - Poster collectData  - -*/
       const currentTdPoster = evento.target.closest("tr").firstChild;

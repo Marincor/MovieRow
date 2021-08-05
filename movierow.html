@@ -17,7 +17,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/Assets/IMG/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Assets/IMG/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_header.css">
-    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main.css">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main-add.css">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main-list.css">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_footer.css">
     <title>MovieRow - Sua própria lista de filmes</title>
 </head>
 
@@ -116,24 +118,25 @@
         </div>
 
         <table border="2" data-table class="content__table">
-            <thead>
-                <th>Poster</th>
-                <th>Nome</th>
-                <th>Categoria</th>
-                <th>Gênero</th>
-                <th>Ano de lançamento</th>
-                <th>Status</th>
-                <th>✏️ / 🗑️</th>
+         
 
-            </thead>
-            <tbody data-tbody id="table-body">
-
+            <tbody data-tbody id="table-body" class="content__table__tbody">
+                   <td class="content__table__tbody-item-cb">Poster</td>
+                   <td class="content__table__tbody-item-cb">Nome</td>
+                   <td class="content__table__tbody-item-cb">Categoria</td>
+                   <td class="content__table__tbody-item-cb">Gênero</td>
+                   <td class="content__table__tbody-item-cb">Ano</td>
+                   <td class="content__table__tbody-item-cb">Status</td>
+                    
             </tbody>
 
         </table>
     </main>
 
-
+    <footer class="footer"> 
+        <p>Coded and created by:<a href="https://github.com/Marincor">Marincor</a></p> 
+        
+    </footer>
     <script src="./Assets/JS/login/current-user-profile.js"></script>
     <script type="module" src="./Assets/JS/list-movies/movies-list.js"></script>
     <script src="./Assets/JS/login/change-current-img.js"></script>
