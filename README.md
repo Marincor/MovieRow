@@ -9,7 +9,7 @@ https://movie-row.vercel.app/index.html
 
 # Sobre
 
-Conceito de lista de filmes, séries, documentários, programas etc. Foi utilizado como base o tratamento de dados em CRUD (Create, Read, Update and Delete); Além disso, para armazenar os dados de criação do usuário e as listas criadas por cada um, foi tilizado Web api em Session Storage e Local Storage. Como o Storage aceita apenas dados em formato string, tive que converter a imagem upada pelo usuário (tanto a imagem de perfil quanto a dos pôsteres dos filmes) em data src para conseguir upar no armazenamento do navegador e depois pegar novamente para exibir para o usuário. 
+Conceito de lista de filmes, séries, documentários, programas etc. Foi utilizado como base o tratamento de dados em CRUD (Create, Read, Update and Delete); Além disso, para armazenar os dados de criação do usuário e as listas criadas por cada um, foi tilizado Web api em Session Storage e Local Storage. Como o Storage aceita apenas dados em formato string, foi necessário converter a imagem upada pelo usuário (tanto a imagem de perfil quanto a dos pôsteres dos filmes) em data src para conseguir upar no armazenamento do navegador e depois pegar novamente para exibir para o usuário. 
 
 > 1° ao acessar a página crie um acesso clicando em 'inscrever-se';
 > 2° após o login, utilize o formulário de preenchimento para adicionar os itens de sua preferência;
