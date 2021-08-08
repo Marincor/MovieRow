@@ -25,7 +25,7 @@ Conceito de lista de filmes, séries, documentários, programas etc. Foi utiliza
 - inclusão de itens à lista;
 - edição de itens;
 - exclusão de itens;
-- log out.
+- logout.
 
 # Tecnologias usadas
 
