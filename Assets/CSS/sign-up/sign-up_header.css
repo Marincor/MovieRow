@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0px) {
   .header {
     display: flex;
     justify-content: center;
@@ -8,7 +8,6 @@
   }
 
   .header__link {
-
     text-decoration: none;
     color: var(--branco);
   }
@@ -20,8 +19,6 @@
   }
 
   .header__logo {
-
     width: 1.5rem;
   }
 }
-

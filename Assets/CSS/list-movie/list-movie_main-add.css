@@ -1,143 +1,113 @@
-@media screen and (min-width:375px) {
+@media screen and (min-width: 0px) {
+  .content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--textoCorpo);
+    justify-content: space-around;
+    overflow: hidden;
+  }
 
-    .content{
+  .content__hidden {
+    display: none;
+  }
+  .content__titulo-texto {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 
-        
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: var(--textoCorpo);
-        justify-content: space-around;
-        overflow: hidden;
-    
+  .content__form {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: start;
+    background-color: var(--azulClaro);
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
 
-    }
+  .content__form h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: white;
+  }
 
-    .content__hidden {
+  .content__form-item-option {
+    border-radius: 1rem;
+    text-align: center;
+  }
+  .content__form-item {
+    margin-bottom: 1rem;
+  }
 
-        display: none;
-    }
-    .content__titulo-texto {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+  .label__category {
+    margin-left: 2rem;
+  }
+  .category,
+  .genre,
+  .status {
+    width: 9.2rem;
+    margin-left: 0.1rem;
+  }
 
-    .content__form {
-        margin-top: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-        text-align: start;
-        background-color: var(--azulClaro);
-        border-radius: 1rem;
-        padding: 0.5rem;
-    }
+  .label__genre {
+    margin-left: 3rem;
+  }
 
+  .label__status {
+    margin-left: 3.4rem;
+  }
 
-    .content__form h3 {
-
-        text-align: center;
-        width: 100%;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        color: white;
-    }
-
-    .content__form-item-option{
-
-        border-radius: 1rem;
-        text-align: center;
-    }
-    .content__form-item{
-
-        margin-bottom: 1rem;
-
-      
-    }
-
-    .label__category {
-
-        margin-left: 2rem;
-    }
-    .category, .genre, .status{
-
-        width: 9.2rem;
-        margin-left: 0.1rem;
-    }
-
-    .label__genre {
-
-        margin-left: 3rem;
-    }
-
-    .label__status {
-
-        margin-left: 3.4rem;
-    }
-
-    .label__year {
-
-        margin-right: 2rem;
-    }
-    .year {
-
-        width: 8.5rem;
-        ;
-    }
-
-   
+  .label__year {
+    margin-right: 2rem;
+  }
+  .year {
+    width: 8.5rem;
+  }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
+  .content {
+    background: url("/Assets/IMG/backgrounds/watch-movie\ 2.jpg") center;
 
-    .content{
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        background: url("/Assets/IMG/backgrounds/watch-movie\ 2.jpg") center;
-        
-        background-size: cover;
-        background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(189, 25, 52, 0.65);
+    background-blend-mode: color;
+  }
 
-        background-attachment: fixed;
-        background-color:rgba(189, 25, 52, 0.65);
-        background-blend-mode: color;
-    }
-
-    .content__form {
-
-        background-color: rgb(236, 233, 233, 0.1);
-        width: 60%;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-   
+  .content__form {
+    background-color: rgb(236, 233, 233, 0.1);
+    width: 60%;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
-@media screen and (min-width:1024px) { 
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
 
+  .content__form {
+    width: 50%;
+    margin-bottom: 0;
+  }
 
-
-    .content {
-
-        width: 100vw;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    .content__form {
-
-        width: 50%;
-        margin-bottom: 0;
-    }
-
-    .content__form input {
-
-        cursor: pointer;
-    }
+  .content__form input {
+    cursor: pointer;
+  }
 }

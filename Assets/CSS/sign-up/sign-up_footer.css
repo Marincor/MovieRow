@@ -1,35 +1,23 @@
-@media screen and (min-width:375px) { 
+@media screen and (min-width: 0px) {
+  .footer {
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--textoCorpo);
+  }
 
-    .footer {
-
-       text-align: center;
-       font-size: 1rem;
-       font-family: var(--textoCorpo);
-     
-        
-    }
-
-    .footer__link{
-
-        color:white;
-    }
-
+  .footer__link {
+    color: white;
+  }
 }
 
-@media screen and (min-width:768px) { 
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
 
-    .footer {
+    justify-content: center;
 
+    height: 28vh;
 
-        display: flex;
-
-        justify-content: center;
-
-      
-        height: 28vh;
-
-        align-items: flex-end;
-    }
-
-
+    align-items: flex-end;
+  }
 }

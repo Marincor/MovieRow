@@ -4,19 +4,9 @@
     background-blend-mode: color;
     justify-content: space-between;
     padding-bottom: 100%;
-
-    
-
   }
 
- 
-
- 
-
   .content__table {
-
-
-
     display: flex;
     flex-direction: column;
     width: 90vw;
@@ -74,7 +64,6 @@
     font-size: 0.8rem;
   }
 
-
   .content__table__tbody-item-cb:nth-child(6) {
     background: var(--azulClaro);
 
@@ -118,170 +107,122 @@
   }
 }
 
-
 @media screen and (min-width: 768px) {
-
-
   .content__table__tbody-item-cb:first-child {
-
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:2rem;
+    padding: 2rem;
     font-weight: bold;
     color: white;
-   
-    
- 
   }
 
   .content__table__tbody-item-cb:nth-child(2) {
-    
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:2rem 1.850rem;
+    padding: 2rem 1.85rem;
     font-weight: bold;
     color: white;
   }
 
   .content__table__tbody-item-cb:nth-child(3) {
-
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:2rem 1.1rem 2rem 1rem;
+    padding: 2rem 1.1rem 2rem 1rem;
     font-weight: bold;
     color: white;
-    
   }
 
   .content__table__tbody-item-cb:nth-child(4) {
-
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:2rem 1.2rem 2rem 1rem;
+    padding: 2rem 1.2rem 2rem 1rem;
     font-weight: bold;
     color: white;
-   
   }
- 
 
   .content__table__tbody-item-cb:nth-child(5) {
-   
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:1.8rem;
+    padding: 1.8rem;
     font-weight: bold;
     color: white;
   }
 
-
   .content__table__tbody-item-cb:nth-child(6) {
-    
-    background-color:transparent;
+    background-color: transparent;
     font-size: 1rem;
-    padding:1.17rem;
+    padding: 1.17rem;
     font-weight: bold;
     color: white;
   }
   .content__table__tbody-tr {
-
     background-color: transparent;
   }
 
- 
-
   td > .content__table__img {
-
     width: 6.85rem;
     height: 6.85rem;
-
   }
 
   .content__table__tbody-tr p {
-
     width: 6.45rem;
     margin-top: 2.5rem;
     color: white;
   }
   .content__table__tbody-tr select:first-child {
-
     width: 6rem;
     font-size: 0.8rem;
     margin-top: 2rem;
   }
-
-
-
 }
 
-
 @media screen and (min-width: 1024px) {
-
- .content__table {
-
-  margin-left: 20%;
- }
+  .content__table {
+    margin-left: 20%;
+  }
 
   .content__table__tbody-item-cb:first-child {
-
     padding: 1rem 6.05rem;
-   
-    
- 
   }
 
   .content__table__tbody-item-cb:nth-child(2) {
-    
     padding: 1rem 1.85rem;
   }
 
   .content__table__tbody-item-cb:nth-child(3) {
-
     padding: 1rem 1.08rem;
-    
   }
 
   .content__table__tbody-item-cb:nth-child(4) {
- 
     padding: 1rem 1.09rem;
   }
- 
 
   .content__table__tbody-item-cb:nth-child(5) {
-   
-    padding: 1rem 1.80rem;
+    padding: 1rem 1.8rem;
   }
-
 
   .content__table__tbody-item-cb:nth-child(6) {
-    
     padding: 1rem 1.18rem;
   }
-  
+
   td > .content__table__img {
     width: 15rem;
     height: 20rem;
-
   }
 
   .content__table__tbody-tr p {
-
-
     padding-top: 5rem;
   }
 
   .content__table__tbody-tr select:first-child {
-
     margin-top: 7rem;
   }
 
   .content__table button {
-
     margin-top: 7.5em;
   }
 
   .content__table button > button {
-
-  
     margin: 0;
   }
-} 
+}
