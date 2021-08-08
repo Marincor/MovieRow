@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main-add.css">
     <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_main-list.css">
     <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_footer.css">
+    <link rel="stylesheet" href="/Assets/CSS/list-movie/list-movie_new-inputs.css">
     <title>MovieRow - Sua própria lista de filmes</title>
 </head>
 
@@ -66,7 +67,7 @@
 
       
         <form data-form class="content__form">
-            <h3>Adicionar novo</h3>
+            <h3>Adicionar novo item</h3>
             <label for="myFileInput" class="content__form-item">Poster do filme
                 <input type="file" id="myFileInput" data-img-move class="content__form-item-option">
             </label>
@@ -113,13 +114,20 @@
         </form>
 
         <span id="previewPoster"></span>
-        <div class="content__titulo">
-            <h2 class="content__titulo-texto">Essa é a sua lista de filmes e séries:</h2>
+      
+        <div class="content__list-container">
+            <div class="content__titulo">
+                <h2 class="content__titulo-texto">Essa é a sua lista de filmes e séries:</h2>
+            </div>
+    
+            <div class="content_list-content">
+              
+            </div>
+
         </div>
-
+       
         <table border="2" data-table class="content__table">
-         
-
+               
             <tbody data-tbody id="table-body" class="content__table__tbody">
                    <td class="content__table__tbody-item-cb">Poster</td>
                    <td class="content__table__tbody-item-cb">Nome</td>

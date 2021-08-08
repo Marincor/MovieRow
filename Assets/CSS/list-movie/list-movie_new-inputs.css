@@ -1,0 +1,80 @@
+@media screen and (min-width: 0px) {
+
+    #newPoster {
+
+        width: 0rem;
+    }
+
+    .newPoster__label {
+
+        padding: 0.39rem;
+    }
+
+    #newName {
+
+        width: 2.1rem;
+    }
+
+    #newYear {
+
+        width: 2.1rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .newPoster__label {
+
+        padding: 2.71rem;
+        
+    }
+
+    #newName {
+
+        width: 6.25rem;
+        margin-top: 1rem;
+       
+    }
+
+    #newYear {
+        width: 6.15rem;
+        margin-top: 1rem;
+
+    }
+    
+ 
+
+}
+
+@media screen and (min-width: 1024px) { 
+    
+
+    #newPoster {
+
+        width: 0rem;
+    }
+
+    .newPoster__label {
+
+        padding: 6.75rem;
+        cursor:pointer;
+    }
+
+    #newName {
+
+        width: 6.30rem;
+        margin-top: 3rem;
+    }
+
+   
+
+    #newYear {
+
+        width: 6.10rem;
+        margin-top: 3rem;
+    }
+
+
+
+}

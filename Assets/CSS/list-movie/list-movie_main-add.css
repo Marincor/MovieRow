@@ -3,11 +3,14 @@
     .content{
 
         
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: var(--textoCorpo);
+        justify-content: space-around;
+        overflow: hidden;
+    
 
     }
 
@@ -23,7 +26,7 @@
     }
 
     .content__form {
-
+        margin-top: 10rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -33,6 +36,7 @@
         background-color: var(--azulClaro);
         border-radius: 1rem;
         padding: 0.5rem;
+        margin-bottom: 40%;
     }
 
 
@@ -88,4 +92,51 @@
     }
 
    
+}
+
+@media screen and (min-width:768px) {
+
+    .content{
+
+        background: url("/Assets/IMG/backgrounds/watch-movie\ 2.jpg") center;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+        background-color:rgba(189, 25, 52, 0.65);
+        background-blend-mode: color;
+    }
+
+    .content__form {
+
+        background-color: rgb(236, 233, 233, 0.1);
+        width: 60%;
+        flex-direction: column;
+    }
+
+   
+}
+
+@media screen and (min-width:1024px) { 
+
+
+
+    .content {
+
+        width: 100vw;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content__form {
+
+        width: 50%;
+    }
+
+    .content__form input {
+
+        cursor: pointer;
+    }
 }

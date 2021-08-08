@@ -178,7 +178,7 @@ btnEditarArray.forEach((btnEditar) => {
 
       /* - - Poster collectData  - -*/
       const currentTdPoster = evento.target.closest("tr").firstChild;
-      currentTdPoster.innerHTML = `<input type="file" id="newPoster" data-img-PosterEdit>`;
+      currentTdPoster.innerHTML = `<label for="newPoster" class="newPoster__label">📷</label><input type="file" id="newPoster" data-img-PosterEdit>`;
       imageCollectorNewPoster();
 
       /*  - - Name  collectData- -*/
@@ -186,13 +186,17 @@ btnEditarArray.forEach((btnEditar) => {
 
       currentTDName.innerHTML = `<input type="text" id="newName" placeholder="${currentTDName.textContent}">`;
 
+
+
       /*  - - Year  collectData- -*/
       const currentTDYear =
         evento.target.closest("tr").firstChild.nextSibling.nextSibling
           .nextSibling.nextSibling;
-      currentTDYear.innerHTML = `<input type="text" id="newCategory" placeholder="${currentTDYear.textContent}">`;
+      currentTDYear.innerHTML = `<input type="text" id="newYear" placeholder="${currentTDYear.textContent}">`;
 
       /* - - - change current itens - - */
+
+      
 
       const btnConfirmarAlt = document.querySelector("[data-btnConfirmarAlt]");
 
@@ -236,12 +240,15 @@ btnEditarArray.forEach((btnEditar) => {
 
           const newCategoryInput =
             evento.target.closest("tr").firstChild.nextSibling.nextSibling
-              .children[0].value;
+              .children[0];
 
-          if (newCategoryInput == "") {
+              
+
+
+          if (newCategoryInput.value == "") {
             console.log("manter categoria atual");
           } else {
-            findCurrentEdit._category = newCategoryInput;
+            findCurrentEdit._category = newCategoryInput.value;
           }
 
           /* - - -genre- - - */
@@ -301,24 +308,52 @@ btnDeleteArray.forEach((btnDelete) => {
       evento.target.closest("tr").firstChild.nextElementSibling.lastElementChild
         .textContent;
 
+        
+
     const findTrNameMovie = listMovie.find(
-      (atribute) => atribute._name == trNameMovie
-    );
+       (atribute) => atribute._name == trNameMovie );
 
-    let i = 0;
+   
 
-    let foundPosition = listMovie[i] == findTrNameMovie;
+       
+     let i = 0;
 
-    while (foundPosition == false) {
-      i++;
-    }
+     let foundPosition = listMovie[i] == findTrNameMovie;
 
-    if (foundPosition == true) {
+
+     if (foundPosition == false) {
+       while (foundPosition == false) {
+        let foundPosition = listMovie[i] == findTrNameMovie;
+          i++;
+  
+          if (foundPosition == true) {
+            
+            let p = i - 1
+  
+            listMovie.splice(p, 1);
+  
+            localStorage.setItem("ListMovies", JSON.stringify(listMovie));
+      
+            window.location.href = "movierow.html";
+            break
+          }
+       }
+
+     } else {
+
       listMovie.splice(i, 1);
-
+  
       localStorage.setItem("ListMovies", JSON.stringify(listMovie));
 
       window.location.href = "movierow.html";
-    }
+
+     }
+
+
+    
+
+    
+
+   
   });
 });

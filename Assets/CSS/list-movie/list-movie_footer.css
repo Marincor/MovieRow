@@ -6,6 +6,7 @@
         background-color: var(--azulEscuro);
         padding: 1rem 0;
         justify-content: space-around;
+        width: 100vw;
     }
 
     .footer a {
@@ -14,3 +15,4 @@
     }
     
 }
+
